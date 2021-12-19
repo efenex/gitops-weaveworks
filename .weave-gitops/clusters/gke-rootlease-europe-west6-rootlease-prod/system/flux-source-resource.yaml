@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: wego-github-gitops-weaveworks
+  namespace: gitops
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  secretRef:
+    name: wego-github-gitops-weaveworks
+  url: ssh://git@github.com/efenex/gitops-weaveworks.git
+
